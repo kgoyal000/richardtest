@@ -4,7 +4,7 @@ body {
 
 .sidebar {
 	height: 100%;
-	width: 250px;
+	width: 25%;
 	position: fixed;
 	z-index: 1;
 	top: 0;
@@ -52,7 +52,7 @@ body {
 #main {
 	transition: margin-left .5s;
 	padding: 16px;
-	margin-left: 250px;
+	margin-left: 25%;
 	height: 100vh;
 	position: relative;
 }
@@ -67,10 +67,10 @@ body {
 .new {
 	background-color: rgb(197, 191, 191);
 	display: block;
-	left: 250px;
+	left: 25%;
 	transition: 0.4s linear;
 	animation: slide .4s ease-out;
-	width: 125px;
+	width: 15%;
 }
 
 .card {
@@ -110,7 +110,7 @@ body {
 
 .page {
 	position: absolute;
-	bottom: 20%;
+	bottom: 25%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
@@ -122,7 +122,7 @@ body {
 	}
 	100% {
 		opacity: 1;
-		width: 125px;
+		width: 15%;
 	}
 }
 
@@ -133,14 +133,14 @@ body {
 	}
 	100% {
 		opacity: 1;
-		width: 125px;
+		width: 15%;
 	}
 }
 
 @-webkit-keyframes slideClose {
 	0% {
 		opacity: 1;
-		width: 125px;
+		width: 15%;
 	}
 	100% {
 		opacity: 0;
@@ -151,7 +151,7 @@ body {
 @keyframes slideClose {
 	0% {
 		opacity: 1;
-		width: 125px;
+		width: 15%;
 	}
 	100% {
 		opacity: 0;
@@ -176,11 +176,17 @@ body {
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 
-@media screen and (max-height: 450px) {
+@media screen and (max-height: 650px) {
 	.sidebar {
 		padding-top: 15px;
 	}
 	.sidebar a {
 		font-size: 18px;
+	}
+}
+
+@media screen and (min-height: 650px){
+	.sidebar a {
+		padding: 8px;
 	}
 }

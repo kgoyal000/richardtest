@@ -1,23 +1,30 @@
-decrease()
+function submit(){
+var xhr = new XMLHttpRequest();
+xhr.open('POST', '/', true);
+xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+xhr.onload = function () {
+    // do something to response
+    $('#data').html($(this.responseText).find('#data').html());
+};
+xhr.send('select='+document.getElementById('select').value+"&"+'page='+document.getElementById('page').value);
+}
   function increase(){
-    document.querySelector('.page').innerHTML = '<i class="arrow left" onclick="decrease()"></i>2<i class="arrow right fade" onclick="increase()"></i>'
-    document.querySelector('.page1').classList.add('hide');
-    document.querySelector('.page2').classList.remove('hide');
-    }
+    $('.arrow.left').removeClass('fade');
+    $('.arrow.right').addClass('fade');
+    document.getElementById('page').value = 2;
+    document.querySelector('#page_num').innerHTML = 2
+  }
   function decrease(){
-    document.querySelector('.page').innerHTML = '<i class="arrow left fade" onclick="decrease()"></i>1<i class="arrow right" onclick="increase()"></i>'
-    document.querySelector('.page2').classList.add('hide');
-    document.querySelector('.page1').classList.remove('hide');
+    $('.arrow.right').removeClass('fade');
+    $('.arrow.left').addClass('fade');
+    document.getElementById('page').value = 1;
+    document.querySelector('#page_num').innerHTML = 1;
   }
   var nav = false;
-
-function submit(){
-  document.forms[form].submit();
-}
 function openNav() {
   nav = true;
   document.getElementById("mySidebar").classList.remove('old');
-  document.getElementById("main").style.left = "125px";
+  document.getElementById("main").style.left = "15%";
   document.getElementById("mySidebar").classList.add('new');
 
 }
