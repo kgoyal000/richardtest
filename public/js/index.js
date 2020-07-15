@@ -23,6 +23,7 @@ xhr.send('select='+document.getElementById('select').value+"&"+'page='+document.
   var nav = false;
 function openNav() {
   nav = true;
+  document.getElementById("mySidebar").classList.remove('start');
   document.getElementById("mySidebar").classList.remove('old');
   document.getElementById("mySidebar").classList.add('new');
   setTimeout(function(){
@@ -36,7 +37,7 @@ function closeNav() {
   document.getElementById("mySidebar").classList.add('old');
   setTimeout(function(){
     document.getElementById("main").style.left = "0";
-  },400)
+  },200)
 }
 function checkNav(){
 if(nav == true){

@@ -57,11 +57,14 @@ body {
 	height: 100vh;
 	position: relative;
 }
-
+.start{
+	width: 0;
+	opacity: 0;
+}
 .old {
 	width: 0;
-	transition: 0.8s ease;
-	animation: slideClose 0.8s ease-out;
+	transition: 0.4s ease;
+	animation: slideClose 0.4s ease-out;
 	opacity: 0;
 }
 
