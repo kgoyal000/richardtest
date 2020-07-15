@@ -178,6 +178,7 @@ body {
 }
 #sidebar{
 	z-index: 2;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
