@@ -188,5 +188,6 @@ body {
 @media screen and (min-height: 650px){
 	.sidebar a {
 		padding: 8px;
+		text-align: center;
 	}
 }
