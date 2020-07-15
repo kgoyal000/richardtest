@@ -25,7 +25,9 @@ function openNav() {
   nav = true;
   document.getElementById("mySidebar").classList.remove('old');
   document.getElementById("mySidebar").classList.add('new');
-  document.getElementById("main").style.left = "15%";
+  setTimeout(function(){
+    document.getElementById("main").style.left = "15%";
+  },400)
 }
 
 function closeNav() {
