@@ -51,12 +51,11 @@ body {
 }
 
 #main {
-	transition: margin-left .5s;
+	transition: margin-left 1s;
 	padding: 16px;
 	margin-left: 25%;
 	height: 100vh;
 	position: relative;
-	z-index: -2;
 }
 
 .old {
@@ -74,6 +73,7 @@ body {
 	transition: 0.4s linear;
 	animation: slide .4s ease-in;
 	width: 15%;
+	z-index: -2;
 }
 
 .card {
