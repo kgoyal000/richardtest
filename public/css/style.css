@@ -51,7 +51,7 @@ body {
 }
 
 #main {
-	transition: margin-left 1s;
+	transition: margin-left 0.4s;
 	padding: 16px;
 	margin-left: 25%;
 	height: 100vh;
@@ -60,8 +60,8 @@ body {
 
 .old {
 	width: 0;
-	transition: 0.4s linear;
-	animation: slideClose 0.4s ease-out;
+	transition: 0.8s ease;
+	animation: slideClose 0.8s ease-out;
 	opacity: 0;
 }
 
