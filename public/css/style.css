@@ -16,7 +16,8 @@ body {
 }
 
 .sidebar a {
-	padding: 8px 8px 8px 32px;
+	padding: 8px;
+	text-align: center;
 	text-decoration: none;
 	font-size: 25px;
 	color: #818181;
@@ -60,7 +61,7 @@ body {
 .old {
 	width: 0px;
 	transition: 0.4s linear;
-	animation: slideClose .4s ease-in;
+	animation: slideClose .4s ease-out;
 	display: none;
 }
 
@@ -69,7 +70,7 @@ body {
 	display: block;
 	left: 25%;
 	transition: 0.4s linear;
-	animation: slide .4s ease-out;
+	animation: slide .4s ease-in;
 	width: 15%;
 }
 
@@ -182,12 +183,5 @@ body {
 	}
 	.sidebar a {
 		font-size: 18px;
-	}
-}
-
-@media screen and (min-height: 650px){
-	.sidebar a {
-		padding: 8px;
-		text-align: center;
 	}
 }

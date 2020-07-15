@@ -33,7 +33,7 @@ function closeNav() {
   nav = false
   document.getElementById("mySidebar").classList.remove('new');
   document.getElementById("mySidebar").classList.add('old');
-  document.getElementById("main").style.left= "0";
+//  document.getElementById("main").style.left= "0";
 }
 function checkNav(){
 if(nav == true){
