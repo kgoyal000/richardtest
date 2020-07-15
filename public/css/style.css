@@ -59,10 +59,10 @@ body {
 }
 
 .old {
-	width: 0px;
-	transition: 0.4s linear;
-	animation: slideClose .4s ease-out;
-	display: none;
+	width: 0;
+	transition: 0.8s linear;
+	animation: slideClose 1s ease-out;
+	opacity: 0;
 }
 
 .new {
