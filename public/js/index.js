@@ -26,18 +26,14 @@ function openNav() {
   document.getElementById("mySidebar").classList.remove('start');
   document.getElementById("mySidebar").classList.remove('old');
   document.getElementById("mySidebar").classList.add('new');
-  setTimeout(function(){
-    document.getElementById("main").style.left = "15%";
-  },400)
+  document.getElementById("main").style.marginLeft = "40%";
 }
 
 function closeNav() {
   nav = false
   document.getElementById("mySidebar").classList.remove('new');
   document.getElementById("mySidebar").classList.add('old');
-  setTimeout(function(){
-    document.getElementById("main").style.left = "0";
-  },200)
+  document.getElementById("main").style.marginLeft = "25%";
 }
 function checkNav(){
 if(nav == true){
