@@ -24,9 +24,8 @@ xhr.send('select='+document.getElementById('select').value+"&"+'page='+document.
 function openNav() {
   nav = true;
   document.getElementById("mySidebar").classList.remove('old');
-  document.getElementById("main").style.left = "15%";
   document.getElementById("mySidebar").classList.add('new');
-
+  document.getElementById("main").style.left = "15%";
 }
 
 function closeNav() {

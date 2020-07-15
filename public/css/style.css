@@ -63,7 +63,6 @@ body {
 	transition: 0.8s linear;
 	animation: slideClose 1s ease-out;
 	opacity: 0;
-	z-index: -2;
 }
 
 .new {
@@ -73,7 +72,6 @@ body {
 	transition: 0.4s linear;
 	animation: slide .4s ease-in;
 	width: 15%;
-	z-index: -2;
 }
 
 .card {
@@ -175,7 +173,9 @@ body {
 	border-width: 0 5px 5px 0;
 	cursor: default;
 }
-
+#sidebar{
+	z-index: 2;
+}
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 
