@@ -19,9 +19,10 @@ function paginate(array, page_size, page_number) {
 var C = [];
 var A = ['Item A1', 'Item A2', 'Item A3', 'Item A4', 'Item A5', 'Item A6'];
 var B = ['Item B1', 'Item B2', 'Item B3', 'Item B4', 'Item B5', 'Item B6'];
-var pagination = paginate(A, 3, 1)
+var pagination;
 
 app.get("/", function (req, res) {
+	pagination = paginate(A, 3, 1)
 	res.render('index', {
 		data: pagination
 	});
