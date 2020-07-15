@@ -56,6 +56,7 @@ body {
 	margin-left: 25%;
 	height: 100vh;
 	position: relative;
+	z-index: -2;
 }
 
 .old {
@@ -63,6 +64,7 @@ body {
 	transition: 0.8s linear;
 	animation: slideClose 1s ease-out;
 	opacity: 0;
+	z-index: -2;
 }
 
 .new {
