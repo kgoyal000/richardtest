@@ -1,13 +1,23 @@
 function submit(){
-var xhr = new XMLHttpRequest();
-xhr.open('POST', '/', true);
-xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-xhr.onload = function () {
-    // do something to response
+  if($('#quan_num').val()==""){
+    $('#quan_num').css('border','red 2px solid');
+  }else{
+    $('#quan_num').css('border','black 2px solid');
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '/', true);
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xhr.onload = function () {
+        // do something to response
     $('#data').html($(this.responseText).find('#data').html());
-};
-xhr.send('select='+document.getElementById('select').value+"&"+'page='+document.getElementById('page').value);
+    };
+    var quantity = document.getElementById('quan_num').value;
+    if(quantity > 3){
+     quantity = 3;
+    }
+     xhr.send('select='+document.getElementById('select').value+"&"+'page='+document.getElementById('page').value+"&"+'quantity='+quantity);
+  }
 }
+
   function increase(){
     $('.arrow.left').removeClass('fade');
     $('.arrow.right').addClass('fade');
@@ -35,7 +45,9 @@ function closeNav() {
   document.getElementById("mySidebar").classList.add('old');
   document.getElementById("main").style.marginLeft = "25%";
 }
-function checkNav(){
+function checkNav(event){
+  console.log(event.target)
+ if(event.target != document.getElementById('quantity') && event.target != document.getElementById('h4_title') && event.target != document.getElementById('quan_num') ){  
 if(nav == true){
   document.getElementById('sidebar').addEventListener('click',()=>{
     closeNav()
@@ -45,4 +57,6 @@ if(nav == true){
     openNav()
   })
 }
+}
+
 }

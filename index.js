@@ -22,7 +22,7 @@ var B = ['Item B1', 'Item B2', 'Item B3', 'Item B4', 'Item B5', 'Item B6'];
 var pagination;
 
 app.get("/", function (req, res) {
-	pagination = paginate(A, 3, 1)
+	pagination = paginate(C, 3, 1)
 	res.render('index', {
 		data: pagination
 	});
@@ -34,8 +34,8 @@ app.post("/", function (req, res) {
 	} else {
 		C = B;
 	}
-	pagination = paginate(C, 3, req.body.page)
-	console.log(req.body.page+"   "+req.body.select+"  "+ pagination)
+	pagination = paginate(C, req.body.quantity, req.body.page)
+	console.log(req.body.page+"   "+req.body.select+"  "+ pagination+" "+req.body.quantity)
 	res.render('index', {
 		data: pagination
 	});
