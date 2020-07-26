@@ -45,18 +45,20 @@ function closeNav() {
   document.getElementById("mySidebar").classList.add('old');
   document.getElementById("main").style.marginLeft = "25%";
 }
-function checkNav(event){
-  console.log(event.target)
- if(event.target != document.getElementById('quantity') && event.target != document.getElementById('h4_title') && event.target != document.getElementById('quan_num') ){  
-if(nav == true){
-  document.getElementById('sidebar').addEventListener('click',()=>{
-    closeNav()
-  })
-}else{
-  document.getElementById('sidebar').addEventListener('click',()=>{
-    openNav()
-  })
+function checkQuan(){
+  if(($('#quan_num').val()=="" || $('#quan_num').val()==0 ) || document.getElementById('select').value == ""){
+    $('.page').css('display','none');
+  }else{
+    $('.page').css('display','block');
+  }
 }
+function checkNav(event){
+  checkQuan();
+if(nav == true && event.target == document.getElementById('sidebar') && event.target != document.getElementById('quantity') && event.target != document.getElementById('h4_title') && event.target != document.getElementById('quan_num') ){
+    closeNav()
+}else{
+  if(event.target == document.getElementById('opt'))
+    openNav()
 }
 
 }
