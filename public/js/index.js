@@ -1,7 +1,9 @@
 function submit(){
   if($('#quan_num').val()==""){
     $('#quan_num').css('border','red 2px solid');
+    $('#data').css('display','none');
   }else{
+    $('#data').css('display','block');
     $('#quan_num').css('border','black 2px solid');
     var xhr = new XMLHttpRequest();
     xhr.open('POST', '/', true);
